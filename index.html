@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Signature</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Digital Signature</h1>
+        <!-- To Add Darkmode -->
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+                <span class="slider round"></span>
+            </label>
+            <span id="darkModeText">Light Mode</span>
+        </div>
+        <!-- Add Color Option -->
+        <div class="color-picker">
+            <input type="color" id="penColorPicker" value="#000000" onchange="changePenColor()">
+            <label for="penColorPicker">Pen Color</label>
+        </div>
+
+        <canvas id="signatureCanvas" width="500" height="200"></canvas>
+        <div class="buttons">
+            <button onclick="clearCanvas()">Clear</button>
+            <button onclick="copySignature()">Copy</button>
+            <button onclick="downloadSignature()">Download</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
